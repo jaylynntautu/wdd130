@@ -135,7 +135,8 @@
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  height: 400px;
+  align-content: center;
+    height: 400px;
 }
 .red5 { 
   width: 300px; 
@@ -144,7 +145,7 @@
 } 
 .green5 { 
   width: 300px; 
-  height: 133px; 
+  height: 133px;
   background-color: green; 
 
 } 
