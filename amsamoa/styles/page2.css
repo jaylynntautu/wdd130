@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Playfair+Display:wght@400;700&display=swap');
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F1FAEE;
+    color: #1D3557;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ---- Header Styling ---- */
+header {
+    background-color: #457B9D;
+    color: white;
+    display: grid;
+    grid-template-columns: 150px auto;
+}
+
+.logo img {
+    max-height: 100px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    z-index: 100;
+    padding: 20px 0; /* Adds padding to space out nav items */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 35px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    background-color: #E63946;
+    border-radius: 5px;
+}
+
+/* ---- Main Content ---- */
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    position: relative;
+}
+
+.home-grid {
+    flex: 1;
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: white;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #E63946;
+    margin-bottom: 30px;
+}
+
+/* ---- Image & Text Layout ---- */
+.image-text-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px; /* Adds spacing between text and image */
+    margin-bottom: 80px; /* Increases spacing between sections */
+    flex-direction: row-reverse; /* This will make the image appear on the right */
+    padding: 40px; /* Adds padding around the section */
+    background-color: white; /* Gives background to each section */
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+
+.image-text-container img {
+    max-width: 45%; /* Keeps images aligned */
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.image-text-container .text {
+    flex: 1;
+    text-align: left;
+}
+
+.image-text-container h1, .image-text-container h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1D3557;
+    margin-bottom: 10px;
+}
+
+.image-text-container p, .image-text-container ul {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.image-text-container ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.image-text-container ul li {
+    margin-bottom: 10px;
+}
+
+/* ---- Footer ---- */
+footer {
+    background-color: #1D3557;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer a {
+    color: #A8DADC;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+footer a:hover {
+    color: #E63946;
+}
+
+.social img {
+    width: 30px;
+    margin: 0 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social img:hover {
+    transform: scale(1.2);
+}
+
+/* ---- Responsive Design ---- */
+@media (max-width: 768px) {
+    .image-text-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .image-text-container img {
+        max-width: 100%;
+    }
+
+    .image-text-container .text {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .image-text-container h1, .image-text-container h2 {
+        font-size: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
