@@ -5,9 +5,7 @@ html, body {
     margin: 0;
     padding: 0;
 }
-h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
-}
+
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #F1FAEE;
@@ -26,7 +24,10 @@ header {
 }
 
 .logo img {
-    max-height: 100px;
+     max-height: 100px; /* Ensure it fits in the header */
+    object-fit: contain; /* Ensures the logo maintains its aspect ratio */
+    margin-bottom: 0; /* Remove any bottom margin if present */
+    align-self: center;
 }
 
 nav {
@@ -49,29 +50,22 @@ nav a:hover {
     border-radius: 5px;
 }
 
-/* ---- Main Content ---- */
-* {
-    box-sizing: border-box;
-  }
-  
-  /* Position the image container (needed to position the left and right arrows) */
-  .container {
+/* ---- Slideshow ---- */
+.container {
     position: relative;
-  }
-  
-  /* Hide the images by default */
-  .mySlides {
+    margin-bottom: 40px; /* Add margin to create space between slideshow and text */
+}
+
+.mySlides {
     display: none;
-  }
-  
-  /* Add a pointer when hovering over the thumbnail images */
-  .cursor {
+}
+
+.cursor {
     cursor: pointer;
-  }
-  
-  /* Next & previous buttons */
-  .prev,
-  .next {
+}
+
+.prev,
+.next {
     cursor: pointer;
     position: absolute;
     top: 40%;
@@ -84,62 +78,60 @@ nav a:hover {
     border-radius: 0 3px 3px 0;
     user-select: none;
     -webkit-user-select: none;
-  }
-  
-  /* Position the "next button" to the right */
-  .next {
+}
+
+.next {
     right: 0;
     border-radius: 3px 0 0 3px;
-  }
-  
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover,
-  .next:hover {
+}
+
+.prev:hover,
+.next:hover {
     background-color: rgba(0, 0, 0, 0.8);
-  }
-  
-  /* Number text (1/3 etc) */
-  .numbertext {
+}
+
+.numbertext {
     color: #f2f2f2;
     font-size: 12px;
     padding: 8px 12px;
     position: absolute;
     top: 0;
-  }
-  
-  /* Container for image text */
-  .caption-container {
+}
+
+.caption-container {
     text-align: center;
     background-color: #222;
     padding: 2px 16px;
     color: white;
-  }
-  
-  .row:after {
+}
+
+.row:after {
     content: "";
     display: table;
     clear: both;
-  }
-  
-  /* Six columns side by side */
-  .column {
+}
+
+.column {
     float: left;
     width: 16.66%;
-  }
-  
-  /* Add a transparency effect for thumnbail images */
-  .demo {
+}
+
+.demo {
     opacity: 0.6;
-  }
-  
-  .active,
-  .demo:hover {
+}
+
+.active,
+.demo:hover {
     opacity: 1;
-  }
+}
+
+/* ---- Main Content ---- */
 .home-grid {
-    flex: 1; /* Expands content area to push footer down */
+    display: flex;
+    flex-direction: column;
+    flex: 1;
     max-width: 1100px;
-    margin: 50px auto;
+    margin: 0 auto;
     padding: 40px;
     background-color: white;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
@@ -152,6 +144,7 @@ h1 {
     font-weight: 700;
     color: #E63946;
     margin-bottom: 30px;
+    font-family: 'Playfair Display', serif;
 }
 
 /* ---- Image & Text Layout ---- */
@@ -183,7 +176,7 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
-    margin-top: auto; /* Pushes footer to bottom */
+    margin-top: auto;
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -234,19 +227,22 @@ footer a:hover {
         flex-direction: column;
         align-items: center;
     }
-#hero-msg h1 #hero-msg h4 {
-    text-align: center;
 
+    #hero-msg h1, #hero-msg h4 {
+        text-align: center;
+    }
 }
-}
+
 .button-box {
     text-align: center;
 }
+
 main section {
     text-align: center;
 }
+
 .book, .join {
-    background-color: #7c6a0a ;
+    background-color: #7c6a0a;
     color: #d9c2a3;
     text-decoration: none;
     font-size: 18px;
@@ -254,13 +250,16 @@ main section {
     margin-top: 50px;
     border-radius: 5px;
 }
+
 .book:hover, .join:hover {
     background-color: #D4AC0D;
     color: #d9c2a3;
 }
-    .hero-img{
-        width: 100%;
+
+.hero-img {
+    width: 100%;
 }
+
 
 
 
